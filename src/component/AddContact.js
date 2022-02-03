@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
 import { toast } from "react-toastify";
 
 const AddContact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [number, setNumber] = useState("");
+  const dispatch = useDispatch();
+  const history = useHistory();
 
   const contacts = useSelector((state) => state);
   const handleSubmit = (e) => {
@@ -32,7 +35,10 @@ const AddContact = () => {
       email,
       number
     };
-    console.log(data);
+    // console.log(data);
+    dispatch({ type: "ADD_CONTACT", payload: data });
+    toast.success("student addded successfully");
+    history.push("/");
   };
   return (
     <div className="container">
