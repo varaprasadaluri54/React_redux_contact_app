@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <div className="container">
-      <Link to="/add" className="fb btn btn-outline-dark my-2 ">
+      <Link to="/add" className="add btn btn-outline-dark my-2 ">
         Add Contact
       </Link>
       <div className="row d-flex flex-column">
