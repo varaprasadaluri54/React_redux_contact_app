@@ -1,11 +1,11 @@
 const initialState = [
   {
     id: 0,
-    name: "hi",
+    name: "student name",
     number: 123456789,
-    email: "r@g.com"
+    email: "student@gmail.com"
   },
-  { id: 1, name: "va", number: 1234567890, email: "rs@g.com" }
+  { id: 1, name: "sample", number: 1234567890, email: "sample@gmail.com" }
 ];
 const contactReducer = (state = initialState, action) => {
   switch (action.type) {
